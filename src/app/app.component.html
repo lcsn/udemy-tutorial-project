@@ -4,8 +4,23 @@
       <h1>I'm in the AppComponent</h1>
       <hr>
       <app-servers></app-servers>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
       <hr>
-      <app-alerts></app-alerts>
+      <input
+        placeholder="Enter Username"
+        class="form-control"
+        type="text"
+        [(ngModel)]="username">
+      <p>{{ username }}</p>
+      <button
+        class="btn btn-primary"
+        (click)="username=''"
+        [disabled]="!username">
+        Reset
+      </button>
     </div>
   </div>
 </div>

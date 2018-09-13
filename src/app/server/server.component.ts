@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-server',
@@ -10,5 +10,10 @@ import {Component} from '@angular/core';
   `]
 })
 export class ServerComponent {
+  @Input() serverId = -1;
+  @Input() serverStatus = 'n.a.';
 
+  getServerStatus(): string {
+    return this.serverStatus;
+  }
 }
