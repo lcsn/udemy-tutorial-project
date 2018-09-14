@@ -26,6 +26,10 @@ export class ServersComponent implements OnInit {
 
   ngOnInit() { }
 
+  isEnabled(): boolean {
+    return !this.allowNewServers || !this.serverName;
+  }
+
   onCreateServer(): void {
     this.serverCreated = true;
     this.serverCreationStatus = `Server ${this.serverName} was created!`;

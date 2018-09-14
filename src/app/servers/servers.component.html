@@ -1,12 +1,21 @@
-<label for="serverName"></label>
-<input id="serverName" type="text" class="form-control" [(ngModel)]="serverName">
-<p>{{ serverName }}</p>
-<button
-  class="btn btn-primary"
-  [disabled]="!allowNewServers"
-  (click)="onCreateServer()">
-  Add Server
-</button>
-<p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
+<p>
+  <label for="serverName"></label>
+  <input id="serverName" type="text" class="form-control" [(ngModel)]="serverName">
+</p>
+<div class="row">
+  <div class="col-xs-4">
+    <p>
+      <button
+        class="btn btn-primary"
+        [disabled]="isEnabled()"
+        (click)="onCreateServer()">
+        Add Server
+      </button>
+    </p>
+  </div>
+  <div class="col-xs-8">
+    <p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
+  </div>
+</div>
 <app-server *ngFor="let server of servers" [server]="server"></app-server>
 
