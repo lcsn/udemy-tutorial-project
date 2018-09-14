@@ -7,7 +7,6 @@
   (click)="onCreateServer()">
   Add Server
 </button>
-<p>{{ serverCreationStatus }}</p>
-<app-server></app-server>
-<app-server [serverId]="10" serverStatus="offline"></app-server>
-<app-server [serverId]="12" serverStatus="online"></app-server>
+<p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
+<app-server *ngFor="let server of servers" [server]="server"></app-server>
+

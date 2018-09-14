@@ -6,21 +6,4 @@
       <app-servers></app-servers>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-6">
-      <hr>
-      <input
-        placeholder="Enter Username"
-        class="form-control"
-        type="text"
-        [(ngModel)]="username">
-      <p>{{ username }}</p>
-      <button
-        class="btn btn-primary"
-        (click)="username=''"
-        [disabled]="!username">
-        Reset
-      </button>
-    </div>
-  </div>
 </div>
