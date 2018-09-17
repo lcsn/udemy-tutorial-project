@@ -1,9 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-6">
-      <h1>I'm in the AppComponent</h1>
+    <div class="col-xs-12">
+      <header>
+        <ul class="nav nav-pills">
+          <li role="presentation" [ngClass]="{ active: tabName === 'servers' }">
+            <a href="#" (click)="tabName = 'servers'" routerLink="/servers">Servers</a>
+          </li>
+          <li role="presentation" [ngClass]="{ active: tabName === 'assignment1' }">
+            <a href="#" (click)="tabName = 'assignment1'" routerLink="/practice/directives">Assignment 1</a>
+          </li>
+        </ul>
+      </header>
+      <h1>Angular6 (formerly known as Angular 2)</h1>
+      <h1>- The Complete Guide</h1>
       <hr>
-      <app-servers></app-servers>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
