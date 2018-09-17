@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PracticeDirectiveComponent implements OnInit {
 
+  displayDetails = false;
+
+  messages: string[] = [];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick(): void {
+    this.displayDetails = !this.displayDetails;
+    this.messages.push(new Date().toUTCString());
   }
 
 }
