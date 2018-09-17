@@ -11,7 +11,25 @@
 <h4>
   Property-Binding
 </h4>
-<app-property-binding [myName]="'Lars'" myAge="{{ 30 }}"></app-property-binding>
+<ul class="list-group">
+  <li class="list-item">
+    <p>Bind a property with curly brackets (left-side of the equation) or square brackets (right side of the equation)</p>
+    <input type="text" value="{{ aNumber }}">
+    <input type="text" [value]="aNumber">
+  </li>
+  <li class="list-item">
+    <p>Bind a JavaScript-Object to the ngClass-Directive and ngStyle-Directive</p>
+    <div [ngClass]="{'red-border': attachClass}"
+         [ngStyle]="{'background-color': 'lightblue', width: '100px', height: '100px'}">
+      Text
+    </div>
+  </li>
+  <li class="list-item">
+    <p>Bind properties to a custom component with Input()</p>
+    <app-property-binding [myName]="'Lars'" myAge="{{ 30 }}"></app-property-binding>
+  </li>
+</ul>
+
 <hr>
 <h4>
   Event-Binding

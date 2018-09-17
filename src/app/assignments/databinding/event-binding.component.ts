@@ -9,7 +9,7 @@ import {
   selector: 'app-event-binding',
   template: `
     <div (click)="onClick()" class="square">
-      Click me!
+     i am a div
     </div>
   `,
   styles: [`
