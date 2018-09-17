@@ -3,7 +3,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-practice-directive',
   templateUrl: './practice-directive.component.html',
-  styles: []
+  styles: [`
+    .white-text {
+      color: white;
+    }
+  `]
 })
 export class PracticeDirectiveComponent implements OnInit {
 
@@ -13,8 +17,7 @@ export class PracticeDirectiveComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   onClick(): void {
     this.displayDetails = !this.displayDetails;

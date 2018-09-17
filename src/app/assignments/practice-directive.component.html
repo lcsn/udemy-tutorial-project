@@ -11,7 +11,8 @@
 <ul class="list-group">
   <li *ngFor="let message of messages, let i = index"
       class="list-group-item"
-      [ngStyle]="{background: (i>4?'blue':'white')}">
+      [ngStyle]="{background: ( i > 3 ? 'blue' : 'white' ) }"
+      [ngClass]="{'white-text': ( i > 3 )}">
     <p>{{ message }}</p>
   </li>
 </ul>
