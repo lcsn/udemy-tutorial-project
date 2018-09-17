@@ -4,7 +4,14 @@
       <header>
         <ul class="nav nav-pills">
           <li role="presentation" [ngClass]="{ active: viewName === '/servers' }">
-            <a href="#" (click)="viewName = '/servers'" routerLink="/servers">Servers</a>
+            <a href="#" (click)="viewName = '/servers'" routerLink="/servers">
+              Servers
+            </a>
+          </li>
+          <li role="presentation" [ngClass]="{ active: viewName === '/practice/lifecycle' }">
+            <a href="#" (click)="viewName = '/practice/lifecycle'" routerLink="/practice/lifecycle">
+              Lifecycle
+            </a>
           </li>
           <li role="presentation" [ngClass]="{ active: viewName === '/practice/databinding' }">
             <a href="#" (click)="viewName = '/practice/databinding'" routerLink="/practice/databinding">
@@ -24,6 +31,11 @@
           <li role="presentation" [ngClass]="{ active: viewName === '/practice/security' }">
             <a href="#" (click)="viewName = '/practice/security'" routerLink="/practice/security">
               Security
+            </a>
+          </li>
+          <li role="presentation" [ngClass]="{ active: viewName === '/practice/other' }">
+            <a href="#" (click)="viewName = '/practice/other'" routerLink="/practice/other">
+              Other
             </a>
           </li>
         </ul>

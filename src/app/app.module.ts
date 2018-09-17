@@ -15,6 +15,9 @@ import { BlinkDirective } from './assignments/custom-directive/blink.directive';
 import { PracticeSecurityComponent } from './assignments/security/practice-security.component';
 import { PropertyBindingComponent } from './assignments/databinding/property-binding.component';
 import { EventBindingComponent } from './assignments/databinding/event-binding.component';
+import { LifecycleComponent } from './assignments/lifecycle.component';
+import { NgContentExampleComponent } from './assignments/other/ng-content-example.component';
+import { OtherComponent } from './assignments/other/other.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { EventBindingComponent } from './assignments/databinding/event-binding.c
     BlinkDirective,
     PracticeSecurityComponent,
     PropertyBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    LifecycleComponent,
+    NgContentExampleComponent,
+    OtherComponent
   ],
   imports: [
     BrowserModule,
