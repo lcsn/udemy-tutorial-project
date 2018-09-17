@@ -11,6 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PracticeDirectiveComponent implements OnInit {
 
+  title = 'Structural Directives';
+
+  value = 10;
+
   displayDetails = false;
 
   messages: string[] = [];

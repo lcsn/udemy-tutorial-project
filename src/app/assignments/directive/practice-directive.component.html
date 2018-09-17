@@ -1,3 +1,9 @@
+<h2>
+  {{ title }}
+</h2>
+<h4>
+  *ngIf and *ngFor
+</h4>
 <div class="row">
   <div class="col-xs-6">
     <button (click)="onClick()" class="btn btn-primary">
@@ -16,3 +22,12 @@
     <p>{{ message }}</p>
   </li>
 </ul>
+<hr>
+<h4>ngSwitch</h4>
+<input type="text" placeholder="Enter value" [(ngModel)]="value">
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="10">it's ten</p>
+  <p *ngSwitchCase="50">it's fifty</p>
+  <p *ngSwitchCase="100">it's hundred</p>
+  <p *ngSwitchDefault>it's something else</p>
+</div>

@@ -1,0 +1,43 @@
+<h2>
+  {{ title }}
+</h2>
+<h4>
+  A custom directive with
+  <ul>
+    <li>property binding</li>
+    <li>set keyword</li>
+  </ul>
+</h4>
+<p *ngIf="switch">
+  #1 Now you cant see him!
+</p>
+<hr>
+<p *appUnless="switch">
+  #2 Now you see me!
+</p>
+<button class="btn btn-primary"
+  (click)="switch = !switch">
+  Toggle
+</button>
+<hr>
+<h4>
+  A custom directive with
+  <ul>
+    <li>property binding</li>
+    <li>@Hostbinding</li>
+    <li>@HostListener</li>
+  </ul>
+</h4>
+<div appHighlight [defaultColor]="'blue'" [highlightColor]="'grey'">
+  MOO
+</div>
+<hr>
+<h4>
+  A custom directive with
+  <ul>
+    <li>Dependency Injection of ElementRef</li>
+  </ul>
+</h4>
+<div appBlink>
+  <p>ich blinke</p>
+</div>

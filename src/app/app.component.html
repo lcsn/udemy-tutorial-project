@@ -6,8 +6,25 @@
           <li role="presentation" [ngClass]="{ active: viewName === '/servers' }">
             <a href="#" (click)="viewName = '/servers'" routerLink="/servers">Servers</a>
           </li>
+          <li role="presentation" [ngClass]="{ active: viewName === '/practice/databinding' }">
+            <a href="#" (click)="viewName = '/practice/databinding'" routerLink="/practice/databinding">
+              Databinding
+            </a>
+          </li>
           <li role="presentation" [ngClass]="{ active: viewName === '/practice/directives' }">
-            <a href="#" (click)="viewName = '/practice/directives'" routerLink="/practice/directives">Assignment 1</a>
+            <a href="#" (click)="viewName = '/practice/directives'" routerLink="/practice/directives">
+              Directives
+            </a>
+          </li>
+          <li role="presentation" [ngClass]="{ active: viewName === '/practice/custom-directives' }">
+            <a href="#" (click)="viewName = '/practice/custom-directives'" routerLink="/practice/custom-directives">
+              Custom Directives
+            </a>
+          </li>
+          <li role="presentation" [ngClass]="{ active: viewName === '/practice/security' }">
+            <a href="#" (click)="viewName = '/practice/security'" routerLink="/practice/security">
+              Security
+            </a>
           </li>
         </ul>
       </header>

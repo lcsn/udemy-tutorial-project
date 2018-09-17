@@ -1,0 +1,38 @@
+<h2>
+  {{ title }}
+</h2>
+<h4>
+  String Interpolation
+</h4>
+<p>
+  Hello, i am {{ myName }}!
+</p>
+<hr>
+<h4>
+  Property-Binding
+</h4>
+<app-property-binding [myName]="'Lars'" myAge="{{ 30 }}"></app-property-binding>
+<hr>
+<h4>
+  Event-Binding
+</h4>
+<app-event-binding (moo)="sayMoo($event)"></app-event-binding>
+<p>{{ moo }}</p>
+<hr>
+<h4>
+  Tow-way-databinding with ngModel
+</h4>
+<div class="row">
+  <div class="col-xs-6">
+    <input type="text" placeholder="username" [(ngModel)]="username">
+    <p style="display: inline">
+      {{ username }}
+    </p>
+  </div>
+</div>
+<button class="btn btn-primary"
+  (click)="username=''"
+  [disabled]="!username">
+  Reset
+</button>
+<hr>
