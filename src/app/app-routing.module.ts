@@ -7,12 +7,14 @@ import { PracticeDatabindingComponent } from './assignments/databinding/practice
 import { PracticeCustomDirectiveComponent } from './assignments/custom-directive/practice-custom-directive.component';
 import { PracticeSecurityComponent } from './assignments/security/practice-security.component';
 import { OtherComponent } from './assignments/other/other.component';
+import { DatabindingDeepDiveComponent } from './assignments/databinding-deep-dive/databinding-deep-dive.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },
   { path: 'servers', component: ServersComponent },
   { path: 'practice/lifecycle', component: LifecycleComponent},
   { path: 'practice/databinding', component: PracticeDatabindingComponent},
+  { path: 'practice/databinding-deep-dive', component: DatabindingDeepDiveComponent},
   { path: 'practice/directives', component: PracticeDirectiveComponent },
   { path: 'practice/custom-directives', component: PracticeCustomDirectiveComponent },
   { path: 'practice/security', component: PracticeSecurityComponent },

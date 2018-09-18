@@ -18,6 +18,9 @@ import { EventBindingComponent } from './assignments/databinding/event-binding.c
 import { LifecycleComponent } from './assignments/lifecycle.component';
 import { NgContentExampleComponent } from './assignments/other/ng-content-example.component';
 import { OtherComponent } from './assignments/other/other.component';
+import { DatabindingDeepDiveComponent } from './assignments/databinding-deep-dive/databinding-deep-dive.component';
+import { CockpitComponent } from './assignments/databinding-deep-dive/cockpit/cockpit.component';
+import { ServerElementComponent } from './assignments/databinding-deep-dive/server-element/server-element.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { OtherComponent } from './assignments/other/other.component';
     EventBindingComponent,
     LifecycleComponent,
     NgContentExampleComponent,
-    OtherComponent
+    OtherComponent,
+    DatabindingDeepDiveComponent,
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,

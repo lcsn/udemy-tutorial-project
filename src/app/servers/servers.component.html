@@ -4,17 +4,13 @@
 </p>
 <div class="row">
   <div class="col-xs-4">
-    <p>
-      <button
-        class="btn btn-primary"
-        [disabled]="isEnabled()"
-        (click)="onCreateServer()">
-        Add Server
-      </button>
-    </p>
-  </div>
-  <div class="col-xs-8">
-    <p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
+    <button
+      class="btn btn-primary"
+      [disabled]="isEnabled()"
+      (click)="onCreateServer()">
+      Add Server
+    </button>
+    <p style="display: inline;" *ngIf="serverCreated">{{ serverCreationStatus }}</p>
   </div>
 </div>
 <app-server *ngFor="let server of servers" [server]="server"></app-server>

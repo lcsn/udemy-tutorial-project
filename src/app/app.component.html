@@ -18,6 +18,11 @@
               Databinding
             </a>
           </li>
+          <li role="presentation" [ngClass]="{ active: viewName === '/practice/databinding-deep-dive' }">
+            <a href="#" (click)="viewName = '/practice/databinding-deep-dive'" routerLink="/practice/databinding-deep-dive">
+              Databinding-Deep-Dive
+            </a>
+          </li>
           <li role="presentation" [ngClass]="{ active: viewName === '/practice/directives' }">
             <a href="#" (click)="viewName = '/practice/directives'" routerLink="/practice/directives">
               Directives
