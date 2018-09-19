@@ -1,16 +1,19 @@
 <h2>Assignments</h2>
 <h4>Game-Control (A.5)</h4>
-<app-game-control (numIncremented)="onNumIncremented($event)"></app-game-control>
+<app-game-control
+  (numIncremented)="onNumIncremented($event)"
+  (reset)="onReset($event)">
+</app-game-control>
 <hr>
 <div class="row">
   <div class="col-xs-6">
     <app-even *ngFor="let odd of odd_data" [data]="odd">
-      <p>ODD</p>
+      ODD - {{ odd }}
     </app-even>
   </div>
   <div class="col-xs-6">
     <app-odd *ngFor="let even of even_data" [data]="even">
-      <p>EVEN</p>
+      EVEN - {{ even }}
     </app-odd>
   </div>
 </div>

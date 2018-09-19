@@ -16,6 +16,7 @@ export class GameControlComponent implements OnInit {
   ref: any;
 
   @Output() numIncremented = new EventEmitter<number>();
+  @Output() reset = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -33,4 +34,9 @@ export class GameControlComponent implements OnInit {
     clearInterval(this.ref);
     this.num = 0;
   }
+
+  resetData(): void {
+    this.reset.emit(true);
+  }
+
 }

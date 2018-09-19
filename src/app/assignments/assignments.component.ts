@@ -22,4 +22,12 @@ export class AssignmentsComponent implements OnInit {
       this.odd_data.push(num);
     }
   }
+
+  onReset(data: boolean): void {
+    if (data) {
+      this.odd_data = [];
+      this.even_data = [];
+    }
+  }
+
 }

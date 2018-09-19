@@ -1,7 +1,11 @@
-<div
-  class="panel panel-default">
-  <div class="panel-heading" #heading>EVEN - {{ data }}</div>
-  <div class="panel-body">
-    <ng-content></ng-content>
+<a href="#">
+  <div
+    class="panel panel-default">
+    <div class="panel-heading"><strong>{{ data }}</strong> is an even number</div>
+    <div class="panel-body">
+      <p>
+        <ng-content></ng-content>
+      </p>
+    </div>
   </div>
-</div>
+</a>
