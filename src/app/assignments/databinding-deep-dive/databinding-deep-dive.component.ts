@@ -7,16 +7,25 @@ import { Component } from '@angular/core';
     .container {
       margin-top: 30px;
     }
-    p {
-      color: blue;
-    }
   `]
 })
 export class DatabindingDeepDiveComponent {
 
-  serverElements = [{type: 'server', name: 'Testserver', content: 'Just a test!'}];
+  serverElements = [{type: 'server', serverName: 'Testserver', serverContent: 'Just a test!'}];
 
-  onElementAdded(element: any) {
-    this.serverElements.push(element);
+  onServerAdded(server: {serverName: string, serverContent: string}) {
+    this.serverElements.push({
+      type: 'server',
+      serverName: server.serverName,
+      serverContent: server.serverContent
+    });
+  }
+
+  onBlueprintAdded(blueprint: {serverName: string, serverContent: string}) {
+    this.serverElements.push({
+      type: 'blueprint',
+      serverName: blueprint.serverName,
+      serverContent: blueprint.serverContent
+    });
   }
 }

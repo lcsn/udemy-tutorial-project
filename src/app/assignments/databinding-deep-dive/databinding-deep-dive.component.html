@@ -16,11 +16,19 @@
   </div>
 </div>
 -->
-<app-cockpit (elementAdded)="onElementAdded($event)"></app-cockpit>
+<app-cockpit
+  (serverCreated)="onServerAdded($event)"
+  (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
 <hr>
 <div class="row">
   <div class="col-xs-12">
-    <app-server-element *ngFor="let server of serverElements" [element]="server"></app-server-element>
+    <app-server-element *ngFor="let server of serverElements" [element]="server">
+      <p>
+        <strong *ngIf="server?.type === 'server'" style="color: red">{{ server?.serverContent }}</strong>
+        <em *ngIf="server?.type === 'blueprint'">{{ server?.serverContent }}</em>
+      </p>
+    </app-server-element>
     <!--
     <div
       class="panel panel-default"
