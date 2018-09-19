@@ -8,6 +8,7 @@ import { PracticeCustomDirectiveComponent } from './assignments/custom-directive
 import { PracticeSecurityComponent } from './assignments/security/practice-security.component';
 import { OtherComponent } from './assignments/other/other.component';
 import { DatabindingDeepDiveComponent } from './assignments/databinding-deep-dive/databinding-deep-dive.component';
+import { AssignmentsComponent } from './assignments/assignments.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'practice/custom-directives', component: PracticeCustomDirectiveComponent },
   { path: 'practice/security', component: PracticeSecurityComponent },
   { path: 'practice/other', component: OtherComponent },
+  { path: 'practice/assignment', component: AssignmentsComponent },
   { path: '**', redirectTo: '/servers' }
 ];
 

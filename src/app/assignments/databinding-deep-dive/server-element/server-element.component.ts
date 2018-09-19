@@ -1,7 +1,7 @@
 import {
   AfterContentChecked,
   AfterContentInit, AfterViewChecked, AfterViewInit,
-  Component,
+  Component, ContentChild,
   DoCheck,
   ElementRef,
   Input,
@@ -36,6 +36,8 @@ export class ServerElementComponent implements
 
   @ViewChild('heading') header: ElementRef;
 
+  @ContentChild('contentParagraph') contentParagraph: ElementRef;
+
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -44,7 +46,9 @@ export class ServerElementComponent implements
 
   ngOnInit() {
     console.log('ngOnInit called!');
+    // Properties as shown below are not accessible until view is initialized
     console.log('Text content: ' + this.header.nativeElement.textContent);
+    console.log('contentParagraph: ' + this.contentParagraph.nativeElement.textContent);
   }
 
   ngDoCheck() {
@@ -61,6 +65,8 @@ export class ServerElementComponent implements
 
   ngAfterViewInit() {
     console.log('ngAfterViewInit called!');
+    console.log('Text content: ' + this.header.nativeElement.textContent);
+    console.log('contentParagraph: ' + this.contentParagraph.nativeElement.textContent);
   }
 
   ngAfterViewChecked() {

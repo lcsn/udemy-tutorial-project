@@ -21,6 +21,10 @@ import { OtherComponent } from './assignments/other/other.component';
 import { DatabindingDeepDiveComponent } from './assignments/databinding-deep-dive/databinding-deep-dive.component';
 import { CockpitComponent } from './assignments/databinding-deep-dive/cockpit/cockpit.component';
 import { ServerElementComponent } from './assignments/databinding-deep-dive/server-element/server-element.component';
+import { GameControlComponent } from './assignments/game-control/game-control.component';
+import { OddComponent } from './assignments/game-control/odd/odd.component';
+import { EvenComponent } from './assignments/game-control/even/even.component';
+import { AssignmentsComponent } from './assignments/assignments.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { ServerElementComponent } from './assignments/databinding-deep-dive/serv
     OtherComponent,
     DatabindingDeepDiveComponent,
     CockpitComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent,
+    AssignmentsComponent
   ],
   imports: [
     BrowserModule,
