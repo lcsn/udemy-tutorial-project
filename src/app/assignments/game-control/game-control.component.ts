@@ -8,7 +8,12 @@ import {
 @Component({
   selector: 'app-game-control',
   templateUrl: './game-control.component.html',
-  styles: []
+  styles: [`
+    button {
+      margin: 0px 5px 0px 5px;
+      width: 120px;
+    }
+  `]
 })
 export class GameControlComponent implements OnInit {
 
