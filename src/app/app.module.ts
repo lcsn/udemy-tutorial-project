@@ -25,6 +25,11 @@ import { GameControlComponent } from './assignments/game-control/game-control.co
 import { OddComponent } from './assignments/game-control/odd/odd.component';
 import { EvenComponent } from './assignments/game-control/even/even.component';
 import { AssignmentsComponent } from './assignments/assignments.component';
+import { BasicHighlightDirective } from './assignments/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './assignments/better-highlight/better-highlight.directive';
+import { PracticeServiceComponent } from './assignments/practice-service/practice-service.component';
+import { AccountComponent } from './assignments/practice-service/account/account.component';
+import { NewAccountComponent } from './assignments/practice-service/new-account/new-account.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +54,12 @@ import { AssignmentsComponent } from './assignments/assignments.component';
     GameControlComponent,
     OddComponent,
     EvenComponent,
-    AssignmentsComponent
+    AssignmentsComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    PracticeServiceComponent,
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
