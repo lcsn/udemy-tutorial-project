@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { LoggingService } from '../logging.service';
-import {AccountsService} from '../accounts.service';
+import { AccountsService } from '../accounts.service';
 
 @Component({
   selector: 'app-new-account',
