@@ -10,7 +10,7 @@ import { OtherComponent } from './assignments/other/other.component';
 import { DatabindingDeepDiveComponent } from './assignments/databinding-deep-dive/databinding-deep-dive.component';
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { PracticeServiceComponent } from './assignments/practice-service/practice-service.component';
-import { PracticeServices2Component } from './assignments/practive-services2/practice-services2.component';
+import { PracticeServices2Component } from './assignments/practice-services2/practice-services2.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },

@@ -30,9 +30,9 @@ import { BetterHighlightDirective } from './assignments/better-highlight/better-
 import { PracticeServiceComponent } from './assignments/practice-service/practice-service.component';
 import { AccountComponent } from './assignments/practice-service/account/account.component';
 import { NewAccountComponent } from './assignments/practice-service/new-account/new-account.component';
-import { PracticeServices2Component } from './assignments/practive-services2/practice-services2.component';
-import { ActiveUsersComponent } from './assignments/practive-services2/active-users/active-users.component';
-import { InactiveUsersComponent } from './assignments/practive-services2/inactive-users/inactive-users.component';
+import { PracticeServices2Component } from './assignments/practice-services2/practice-services2.component';
+import { ActiveUsersComponent } from './assignments/practice-services2/active-users/active-users.component';
+import { InactiveUsersComponent } from './assignments/practice-services2/inactive-users/inactive-users.component';
 
 @NgModule({
   declarations: [
