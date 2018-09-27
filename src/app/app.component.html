@@ -49,8 +49,13 @@
             </a>
           </li>
           <li role="presentation" [ngClass]="{ active: viewName === '/practice/services' }">
-            <a href="#" (click)="viewName = '/practice/assignment'" routerLink="/practice/services">
+            <a href="#" (click)="viewName = '/practice/services'" routerLink="/practice/services">
               Services
+            </a>
+          </li>
+          <li role="presentation" [ngClass]="{ active: viewName === '/practice/services2' }">
+            <a href="#" (click)="viewName = '/practice/services2'" routerLink="/practice/services2">
+              Services2
             </a>
           </li>
         </ul>

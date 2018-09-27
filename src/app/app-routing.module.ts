@@ -10,6 +10,7 @@ import { OtherComponent } from './assignments/other/other.component';
 import { DatabindingDeepDiveComponent } from './assignments/databinding-deep-dive/databinding-deep-dive.component';
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { PracticeServiceComponent } from './assignments/practice-service/practice-service.component';
+import { PracticeServices2Component } from './assignments/practive-services2/practice-services2.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'practice/other', component: OtherComponent },
   { path: 'practice/assignment', component: AssignmentsComponent },
   { path: 'practice/services', component: PracticeServiceComponent },
+  { path: 'practice/services2', component: PracticeServices2Component },
   { path: '**', redirectTo: '/servers' }
 ];
 
