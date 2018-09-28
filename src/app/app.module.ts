@@ -33,6 +33,11 @@ import { NewAccountComponent } from './assignments/practice-service/new-account/
 import { PracticeServices2Component } from './assignments/practice-services2/practice-services2.component';
 import { ActiveUsersComponent } from './assignments/practice-services2/active-users/active-users.component';
 import { InactiveUsersComponent } from './assignments/practice-services2/inactive-users/inactive-users.component';
+import { RoutingComponent } from './assignments/routing/routing.component';
+import { HomeComponent } from './assignments/routing/home/home.component';
+import { UserComponent } from './assignments/routing/users/user/user.component';
+import { UsersComponent } from './assignments/routing/users/users.component';
+import { EditServerComponent } from './assignments/routing/servers/edit-server/edit-server.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +70,15 @@ import { InactiveUsersComponent } from './assignments/practice-services2/inactiv
     NewAccountComponent,
     PracticeServices2Component,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    // Routing Assignment
+    RoutingComponent,
+    HomeComponent,
+    ServersComponent,
+    ServerComponent,
+    EditServerComponent,
+    UsersComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

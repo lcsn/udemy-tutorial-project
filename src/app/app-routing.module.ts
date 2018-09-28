@@ -11,6 +11,7 @@ import { DatabindingDeepDiveComponent } from './assignments/databinding-deep-div
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { PracticeServiceComponent } from './assignments/practice-service/practice-service.component';
 import { PracticeServices2Component } from './assignments/practice-services2/practice-services2.component';
+import { RoutingComponent } from './assignments/routing/routing.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'practice/assignment', component: AssignmentsComponent },
   { path: 'practice/services', component: PracticeServiceComponent },
   { path: 'practice/services2', component: PracticeServices2Component },
+  { path: 'practice/routing', component: RoutingComponent },
   { path: '**', redirectTo: '/servers' }
 ];
 

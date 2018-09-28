@@ -58,6 +58,11 @@
               Services2
             </a>
           </li>
+          <li role="presentation" [ngClass]="{ active: viewName === '/practice/routing' }">
+            <a href="#" (click)="viewName = '/practice/routing'" routerLink="/practice/routing">
+              Routing
+            </a>
+          </li>
         </ul>
       </header>
       <h1>Angular6 (formerly known as Angular 2)</h1>
