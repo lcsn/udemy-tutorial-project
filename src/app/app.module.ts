@@ -38,6 +38,8 @@ import { HomeComponent } from './assignments/routing/home/home.component';
 import { UserComponent } from './assignments/routing/users/user/user.component';
 import { UsersComponent } from './assignments/routing/users/users.component';
 import { EditServerComponent } from './assignments/routing/servers/edit-server/edit-server.component';
+import { Servers2Component } from './assignments/routing/servers/servers2.component';
+import { Server2Component } from './assignments/routing/servers/server/server2.component';
 
 @NgModule({
   declarations: [
@@ -74,8 +76,8 @@ import { EditServerComponent } from './assignments/routing/servers/edit-server/e
     // Routing Assignment
     RoutingComponent,
     HomeComponent,
-    ServersComponent,
-    ServerComponent,
+    Servers2Component,
+    Server2Component,
     EditServerComponent,
     UsersComponent,
     UserComponent

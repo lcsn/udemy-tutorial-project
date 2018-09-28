@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ServersService } from './servers.service';
 
 @Component({
-  selector: 'app-servers',
-  templateUrl: './servers.component.html',
-  styleUrls: ['./servers.component.css']
+  selector: 'app-servers2',
+  templateUrl: './servers2.component.html',
+  styleUrls: ['./servers2.component.css']
 })
-export class ServersComponent implements OnInit {
-  private servers: {id: number, name: string, status: string}[] = [];
+export class Servers2Component implements OnInit {
+  servers: {id: number, name: string, status: string}[] = [];
 
   constructor(private serversService: ServersService) { }
 
