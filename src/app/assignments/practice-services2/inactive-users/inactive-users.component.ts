@@ -1,6 +1,5 @@
 import {
   Component,
-  Input,
   OnInit
 } from '@angular/core';
 import {UsersService} from '../users.service';
@@ -11,12 +10,13 @@ import {UsersService} from '../users.service';
   styleUrls: ['./inactive-users.component.css']
 })
 export class InactiveUsersComponent implements OnInit {
-  @Input() users: string[];
+
+  users: string[];
 
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
-    this.users = this.usersService.activeUsers;
+    this.users = this.usersService.inactiveUsers;
     this.usersService.userInactive.subscribe((id: number) => {
       this.usersService.setUserToInactive(id);
     });

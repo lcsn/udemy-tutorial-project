@@ -1,6 +1,5 @@
 import {
   Component,
-  Input,
   OnInit
 } from '@angular/core';
 import {UsersService} from '../users.service';
@@ -12,7 +11,7 @@ import {UsersService} from '../users.service';
 })
 export class ActiveUsersComponent implements OnInit {
 
-  @Input() users: string[];
+  users: string[];
 
   constructor(private usersService: UsersService) { }
 
