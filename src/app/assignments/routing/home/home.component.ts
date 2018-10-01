@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  ActivatedRoute,
+  Router
+} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
+  }
+
+  onLoadServers(): void {
+    // maybe compley calculation
+    // this.router.navigate(['/practice', 'routing', 'servers']);
+    this.router.navigate(['servers'], {relativeTo: this.route});
+
   }
 
 }
