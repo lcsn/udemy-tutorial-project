@@ -21,7 +21,12 @@ export class HomeComponent implements OnInit {
     // maybe compley calculation
     // this.router.navigate(['/practice', 'routing', 'servers']);
     this.router.navigate(['servers'], {relativeTo: this.route});
+  }
 
+  onLoadUsers(): void {
+    // maybe compley calculation
+    // this.router.navigate(['/practice', 'routing', 'servers']);
+    this.router.navigate(['users'], {relativeTo: this.route});
   }
 
 }
