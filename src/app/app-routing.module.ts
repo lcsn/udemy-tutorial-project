@@ -12,8 +12,9 @@ import { AssignmentsComponent } from './assignments/assignments.component';
 import { PracticeServiceComponent } from './assignments/practice-service/practice-service.component';
 import { PracticeServices2Component } from './assignments/practice-services2/practice-services2.component';
 import { RoutingComponent } from './assignments/routing/routing.component';
+import { ROUTING_ROUTES } from './assignments/routing/routing.routes';
 
-const routes: Routes = [
+const ROUTES: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },
   { path: 'servers', component: ServersComponent },
   { path: 'practice/lifecycle', component: LifecycleComponent},
@@ -26,13 +27,13 @@ const routes: Routes = [
   { path: 'practice/assignment', component: AssignmentsComponent },
   { path: 'practice/services', component: PracticeServiceComponent },
   { path: 'practice/services2', component: PracticeServices2Component },
-  { path: 'practice/routing', component: RoutingComponent },
+  { path: 'practice/routing', component: RoutingComponent, children: ROUTING_ROUTES },
   { path: '**', redirectTo: '/servers' }
 ];
 
 @NgModule({
   exports: [ RouterModule ],
-  imports: [ RouterModule.forRoot(routes) ]
+  imports: [ RouterModule.forRoot(ROUTES) ]
 })
 export class AppRoutingModule {
 

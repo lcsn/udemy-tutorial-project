@@ -3,7 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-routing',
   templateUrl: './routing.component.html',
-  styles: []
+  styles: [`
+    .container {
+      margin-top: 30px;
+    }
+  `]
 })
-export class RoutingComponent {
+export class RoutingComponent  {
+
 }
