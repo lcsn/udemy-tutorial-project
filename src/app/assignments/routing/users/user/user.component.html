@@ -5,6 +5,8 @@
     (click)="goToUser()">
     Go To User with Id: {{ user?.id }}
   </button>
+  <hr>
+  <a [routerLink]="['/practice', 'routing', 'users', 1]">Go to Anna (ID:2)</a>
 </div>
 <ng-template #infoText>
   Please select a user!
