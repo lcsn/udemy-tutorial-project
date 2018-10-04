@@ -1,26 +1,32 @@
-import {Injectable} from '@angular/core';
+import {
+  EventEmitter,
+  Injectable
+} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServersService {
-  private servers = [
+
+  private servers: {id: number, name: string, status: string}[] = [
     {
-      id: 1,
+      id: 0,
       name: 'Productionserver',
       status: 'online'
     },
     {
-      id: 2,
+      id: 1,
       name: 'Testserver',
       status: 'offline'
     },
     {
-      id: 3,
+      id: 2,
       name: 'Devserver',
       status: 'offline'
     }
   ];
+
+  // serverSelect = new EventEmitter<{id: number, name: string, status: string}>();
 
   getServers() {
     return this.servers;
@@ -33,6 +39,7 @@ export class ServersService {
       }
     );
     return server;
+    // return this.servers[id];
   }
 
   updateServer(id: number, serverInfo: {name: string, status: string}) {

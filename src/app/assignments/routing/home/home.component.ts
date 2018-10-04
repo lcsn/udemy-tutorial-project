@@ -23,6 +23,10 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['servers'], {relativeTo: this.route});
   }
 
+  onLoadServer(id: number): void {
+    this.router.navigate(['servers', id, 'edit'], {relativeTo: this.route, queryParams: {allowEdit: 1}, fragment: 'loading'});
+  }
+
   onLoadUsers(): void {
     // maybe compley calculation
     // this.router.navigate(['/practice', 'routing', 'servers']);

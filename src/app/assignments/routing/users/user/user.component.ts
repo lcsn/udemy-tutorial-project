@@ -26,8 +26,10 @@ export class UserComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // const userId = this.route.snapshot.params['id'];
-    // If the component is recreated from within itself angular won't render it again. It reloads the data, but if params.snapshot is used, the data has not changed.
-    // To keep track of the data subscribe to the observable params on the route. It is triggered each time the params is changed.
+    // If the component is recreated from within itself angular won't render it again.
+    // It reloads the data, but if params.snapshot is used, the data has not changed.
+    // To keep track of the data subscribe to the observable params on the route.
+    // It is triggered each time the params is changed.
     this.paramsSubscription = this.route.params
       .subscribe(
         (params: Params) => {
@@ -56,7 +58,7 @@ export class UserComponent implements OnInit, OnDestroy {
 
   goToUser(): void {
     // this.router.navigate([this.user.id - 1], {relativeTo: this.route})
-    this.router.navigate(['/practice', 'routing', 'users', this.user.id - 1])
+    this.router.navigate(['/practice', 'routing', 'users', this.user.id])
       .then(() => { console.log('ready'); })
       .catch((err: any) => { console.log(err); });
   }

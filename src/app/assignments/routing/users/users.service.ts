@@ -7,15 +7,15 @@ export class UsersService2 {
 
   users = [
     {
-      id: 1,
+      id: 0,
       name: 'Max'
     },
     {
-      id: 2,
+      id: 1,
       name: 'Anna'
     },
     {
-      id: 3,
+      id: 2,
       name: 'Chris'
     }
   ];
