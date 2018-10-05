@@ -29,8 +29,8 @@ const ROUTES: Routes = [
   { path: 'practice/services', component: PracticeServiceComponent },
   { path: 'practice/services2', component: PracticeServices2Component },
   { path: 'practice/routing', component: RoutingComponent, children: ROUTING_ROUTES },
-  { path: '404', component: PageNotFoundComponent },
-  { path: '**', redirectTo: '/404' }
+  { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/not-found' }
 ];
 
 @NgModule({
