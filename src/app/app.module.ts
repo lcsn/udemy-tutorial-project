@@ -40,6 +40,7 @@ import { UsersComponent } from './assignments/routing/users/users.component';
 import { EditServerComponent } from './assignments/routing/servers/edit-server/edit-server.component';
 import { Servers2Component } from './assignments/routing/servers/servers2.component';
 import { Server2Component } from './assignments/routing/servers/server/server2.component';
+import { PageNotFoundComponent } from './assignments/routing/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { Server2Component } from './assignments/routing/servers/server/server2.c
     Server2Component,
     EditServerComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

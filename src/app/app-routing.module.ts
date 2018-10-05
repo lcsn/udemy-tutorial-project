@@ -13,6 +13,7 @@ import { PracticeServiceComponent } from './assignments/practice-service/practic
 import { PracticeServices2Component } from './assignments/practice-services2/practice-services2.component';
 import { RoutingComponent } from './assignments/routing/routing.component';
 import { ROUTING_ROUTES } from './assignments/routing/routing.routes';
+import { PageNotFoundComponent } from './assignments/routing/page-not-found/page-not-found.component';
 
 const ROUTES: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },
@@ -28,7 +29,8 @@ const ROUTES: Routes = [
   { path: 'practice/services', component: PracticeServiceComponent },
   { path: 'practice/services2', component: PracticeServices2Component },
   { path: 'practice/routing', component: RoutingComponent, children: ROUTING_ROUTES },
-  { path: '**', redirectTo: '/servers' }
+  { path: '404', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/404' }
 ];
 
 @NgModule({
