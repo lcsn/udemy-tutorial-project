@@ -12,7 +12,11 @@ export const ROUTING_ROUTES: Routes = [
   { path: 'users', component: UsersComponent },
   { path: 'users/:id', component: UserComponent },
   { path: 'users/:id/edit', component: UserComponent },
-  { path: 'servers', component: Servers2Component },
-  { path: 'servers/:id', component: Server2Component },
-  { path: 'servers/:id/edit', component: EditServerComponent },
+  { path: 'servers', component: Servers2Component, children: [
+      { path: ':id', component: Server2Component },
+      { path: ':id/edit', component: EditServerComponent }
+    ]
+  },
+  // { path: 'servers/:id', component: Server2Component },
+  // { path: 'servers/:id/edit', component: EditServerComponent },
 ];

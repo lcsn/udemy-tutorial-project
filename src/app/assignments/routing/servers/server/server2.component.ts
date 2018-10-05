@@ -28,4 +28,12 @@ export class Server2Component implements OnInit {
     // });
   }
 
+  isOnline(): string {
+    if (this.server.status === 'online') {
+      return 'green';
+    } else if (this.server.status === 'offline') {
+      return 'red';
+    }
+    return 'gray';
+  }
 }

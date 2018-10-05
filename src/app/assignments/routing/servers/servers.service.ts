@@ -26,7 +26,7 @@ export class ServersService {
     }
   ];
 
-  // serverSelect = new EventEmitter<{id: number, name: string, status: string}>();
+  serverSelect = new EventEmitter<{id: number, name: string, status: string}>();
 
   getServers() {
     return this.servers;

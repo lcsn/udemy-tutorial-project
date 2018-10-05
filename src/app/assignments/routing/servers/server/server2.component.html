@@ -1,2 +1,23 @@
+<!--<div *ngIf="server else infoText">-->
+  <!--<h5>{{ server?.name }}</h5>-->
+  <!--<p>Server status is {{ server?.status }}</p>-->
+<!--</div>-->
+<!--<ng-template #infoText>-->
+  <!--<p>Select a Server!</p>-->
+<!--</ng-template>-->
+
 <h5>{{ server?.name }}</h5>
 <p>Server status is {{ server?.status }}</p>
+<div
+  class="panel panel-default">
+  <div class="panel-heading">
+    <strong>{{ server?.name }}</strong>
+    <span class="pull-right badge" [ngStyle]="{'background-color': isOnline()}">
+      {{ server?.status }}
+    </span>
+    <span class="sr-only">Server status indicator</span>
+  </div>
+  <div class="panel-body">
+    <p>no content</p>
+  </div>
+</div>

@@ -15,8 +15,8 @@ export class Servers2Component implements OnInit {
     this.servers = this.serversService.getServers();
   }
 
-  // selectServer(server: {id: number, name: string, status: string}) {
-  //   this.serversService.serverSelect.emit(server);
-  // }
+  onServerSelected(server: {id: number, name: string, status: string}) {
+    this.serversService.serverSelect.emit(server);
+  }
 
 }

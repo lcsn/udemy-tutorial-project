@@ -1,0 +1,6 @@
+span .online {
+  background-color: green;
+}
+span .offline {
+  background-color: red;
+}
