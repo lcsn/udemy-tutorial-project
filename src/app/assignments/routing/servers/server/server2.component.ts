@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServersService } from '../servers.service';
 import {
   ActivatedRoute,
-  Params
+  Params, Router
 } from '@angular/router';
 
 @Component({
@@ -15,6 +15,7 @@ export class Server2Component implements OnInit {
   server: {id: number, name: string, status: string};
 
   constructor(private route: ActivatedRoute,
+              private router: Router,
               private serversService: ServersService) { }
 
   ngOnInit() {
@@ -35,5 +36,9 @@ export class Server2Component implements OnInit {
       return 'red';
     }
     return 'gray';
+  }
+
+  onEdit() {
+    this.router.navigate(['edit'], {relativeTo: this.route, queryParamsHandling: 'preserve'});
   }
 }

@@ -6,8 +6,8 @@
   <!--<p>Select a Server!</p>-->
 <!--</ng-template>-->
 
-<h5>{{ server?.name }}</h5>
-<p>Server status is {{ server?.status }}</p>
+<!--<h5>{{ server?.name }}</h5>-->
+<!--<p>Server status is {{ server?.status }}</p>-->
 <div
   class="panel panel-default">
   <div class="panel-heading">
@@ -18,6 +18,8 @@
     <span class="sr-only">Server status indicator</span>
   </div>
   <div class="panel-body">
-    <p>no content</p>
+    <button class="btn btn-primary" (click)="onEdit()">
+      Edit Server
+    </button>
   </div>
 </div>

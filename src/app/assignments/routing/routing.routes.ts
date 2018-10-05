@@ -9,14 +9,16 @@ import { Server2Component } from './servers/server/server2.component';
 
 export const ROUTING_ROUTES: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'users', component: UsersComponent },
-  { path: 'users/:id', component: UserComponent },
-  { path: 'users/:id/edit', component: UserComponent },
+  { path: 'users', component: UsersComponent, children: [
+    { path: ':id', component: UserComponent },
+    { path: ':id/edit', component: UserComponent }
+  ] },
+  // { path: 'users/:id', component: UserComponent },
+  // { path: 'users/:id/edit', component: UserComponent },
   { path: 'servers', component: Servers2Component, children: [
-      { path: ':id', component: Server2Component },
-      { path: ':id/edit', component: EditServerComponent }
-    ]
-  },
+    { path: ':id', component: Server2Component },
+    { path: ':id/edit', component: EditServerComponent }
+  ] },
   // { path: 'servers/:id', component: Server2Component },
   // { path: 'servers/:id/edit', component: EditServerComponent },
 ];

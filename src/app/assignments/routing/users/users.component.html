@@ -3,6 +3,7 @@
     <div class="list-group">
       <a
         [routerLink]="[user.id]"
+        routerLinkActive="active"
         class="list-group-item"
         *ngFor="let user of users"
         (click)="selectUser(user)">
@@ -10,8 +11,8 @@
       </a>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-4">
-    <app-user></app-user>
+  <div class="col-xs-12 col-sm-8">
+    <router-outlet></router-outlet>
   </div>
 </div>
 
