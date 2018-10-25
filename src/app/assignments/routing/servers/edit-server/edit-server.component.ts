@@ -55,7 +55,7 @@ export class EditServerComponent implements OnInit, CanComponentDeactivate {
     this.changesSaved = true;
     // console.log(this.location);
     // this.location.back();
-    this.router.navigate(['../'], {relativeTo: this.route})
+    this.router.navigate(['../'], {relativeTo: this.route, queryParamsHandling: 'preserve'})
   }
 
   canDeactivate(): Observable<boolean> | Promise<boolean> | boolean {

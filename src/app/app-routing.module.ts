@@ -14,6 +14,7 @@ import { PracticeServices2Component } from './assignments/practice-services2/pra
 import { RoutingComponent } from './assignments/routing/routing.component';
 import { ROUTING_ROUTES } from './assignments/routing/routing.routes';
 import { PageNotFoundComponent } from './assignments/routing/page-not-found/page-not-found.component';
+import { ErrorPageComponent } from './assignments/routing/error-page/error-page.component';
 
 const ROUTES: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },
@@ -29,7 +30,8 @@ const ROUTES: Routes = [
   { path: 'practice/services', component: PracticeServiceComponent },
   { path: 'practice/services2', component: PracticeServices2Component },
   { path: 'practice/routing', component: RoutingComponent, children: ROUTING_ROUTES },
-  { path: 'not-found', component: PageNotFoundComponent },
+  //{ path: 'not-found', component: PageNotFoundComponent },
+  { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!' } },
   { path: '**', redirectTo: '/not-found' }
 ];
 

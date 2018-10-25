@@ -7,6 +7,7 @@ import { EditServerComponent } from './servers/edit-server/edit-server.component
 import { Server2Component } from './servers/server/server2.component';
 import { AuthGuard } from './auth-guard.service';
 import { CanDeactivateGuard } from './servers/edit-server/can-deactivate-guard.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 
 export const ROUTING_ROUTES: Routes = [
@@ -17,14 +18,13 @@ export const ROUTING_ROUTES: Routes = [
   ] },
   // { path: 'users/:id', component: UserComponent },
   // { path: 'users/:id/edit', component: UserComponent },
-  { 
-    path: 'servers',
+  { path: 'servers',
     //canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
     component: Servers2Component, children: [
     { path: ':id', component: Server2Component },
     { path: ':id/edit', component: EditServerComponent, canDeactivate: [CanDeactivateGuard] }
-  ] },
+  ] }
   // { path: 'servers/:id', component: Server2Component },
   // { path: 'servers/:id/edit', component: EditServerComponent },
 ];
