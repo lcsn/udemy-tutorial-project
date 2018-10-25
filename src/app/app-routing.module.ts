@@ -31,12 +31,13 @@ const ROUTES: Routes = [
   { path: 'practice/services2', component: PracticeServices2Component },
   { path: 'practice/routing', component: RoutingComponent, children: ROUTING_ROUTES },
   //{ path: 'not-found', component: PageNotFoundComponent },
-  { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!' } },
+  { path: 'not-found', component: ErrorPageComponent, data: { message: 'Page not found!' } },
   { path: '**', redirectTo: '/not-found' }
 ];
 
 @NgModule({
   exports: [ RouterModule ],
+  // imports: [ RouterModule.forRoot(ROUTES, { useHash: true }) ]
   imports: [ RouterModule.forRoot(ROUTES) ]
 })
 export class AppRoutingModule {
