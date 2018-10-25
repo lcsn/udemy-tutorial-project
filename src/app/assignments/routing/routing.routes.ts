@@ -8,6 +8,7 @@ import { Server2Component } from './servers/server/server2.component';
 import { AuthGuard } from './auth-guard.service';
 import { CanDeactivateGuard } from './servers/edit-server/can-deactivate-guard.service';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { ServerResolver } from './servers/server/server-resolver.service';
 
 
 export const ROUTING_ROUTES: Routes = [
@@ -22,7 +23,7 @@ export const ROUTING_ROUTES: Routes = [
     //canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
     component: Servers2Component, children: [
-    { path: ':id', component: Server2Component },
+    { path: ':id', component: Server2Component, resolve: {server: ServerResolver } },
     { path: ':id/edit', component: EditServerComponent, canDeactivate: [CanDeactivateGuard] }
   ] }
   // { path: 'servers/:id', component: Server2Component },

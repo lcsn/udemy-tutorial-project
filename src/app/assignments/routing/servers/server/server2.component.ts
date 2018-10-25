@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServersService } from '../servers.service';
 import {
   ActivatedRoute,
-  Params, Router
+  Params, Router, Data
 } from '@angular/router';
 
 @Component({
@@ -20,7 +20,10 @@ export class Server2Component implements OnInit {
 
   ngOnInit() {
     const id: number = +this.route.snapshot.params['id']
-    this.server = this.serversService.getServer(id);
+    // this.server = this.serversService.getServer(id);
+    this.route.data.subscribe((data: Data) => {
+      this.server = data['server'];  
+    });
     this.route.params.subscribe((params: Params) => {
       this.server = this.serversService.getServer(+params['id']);
     });
