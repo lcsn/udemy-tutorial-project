@@ -3,6 +3,7 @@ import {
   ActivatedRoute,
   Router
 } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ import {
 export class HomeComponent implements OnInit {
 
   constructor(private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -31,6 +33,14 @@ export class HomeComponent implements OnInit {
     // maybe compley calculation
     // this.router.navigate(['/practice', 'routing', 'servers']);
     this.router.navigate(['users'], {relativeTo: this.route});
+  }
+
+  onLogin(): void {
+    this.authService.login();
+  }
+
+  onLogout(): void {
+    this.authService.logout();    
   }
 
 }

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { LoggingService } from '../practice-service/logging.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ export class AuthService {
 
   loggedIn = false;
 
-  constructor() { }
+  constructor(private log: LoggingService) { }
 
   isAuthenticated() {
     const promise = new Promise((resolve, reject) => {
@@ -18,9 +19,12 @@ export class AuthService {
 
   login() {
     this.loggedIn = true;
+    this.log.info('AuthService', 'login() called');
   }
 
-  logOut() {
+  logout() {
     this.loggedIn = false;
+    this.log.info('AuthService', 'logout() called');
   }
+
 }

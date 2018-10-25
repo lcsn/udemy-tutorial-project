@@ -9,4 +9,8 @@ export class LoggingService {
     console.log('A server status changed, new status: ' + status);
   }
 
+  info(_class: string, message: string) {
+    console.log(`${_class} : ${message}`);
+  }
+
 }
