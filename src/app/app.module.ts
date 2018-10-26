@@ -42,6 +42,9 @@ import { Servers2Component } from './assignments/routing/servers/servers2.compon
 import { Server2Component } from './assignments/routing/servers/server/server2.component';
 import { PageNotFoundComponent } from './assignments/routing/page-not-found/page-not-found.component';
 import { ErrorPageComponent } from './assignments/routing/error-page/error-page.component';
+import { ObservableComponent } from './assignments/observable/observable.component';
+import { HomeObservableComponent } from './assignments/observable/home-observable/home-observable.component';
+import { UserObservableComponent } from './assignments/observable/user-observable/user-observable.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +87,10 @@ import { ErrorPageComponent } from './assignments/routing/error-page/error-page.
     UsersComponent,
     UserComponent,
     PageNotFoundComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    ObservableComponent,
+    HomeObservableComponent,
+    UserObservableComponent
   ],
   imports: [
     BrowserModule,
