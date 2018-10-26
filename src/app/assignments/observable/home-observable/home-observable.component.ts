@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable, Observer, Subscription } from 'rxjs/Rx';
-import 'rxjs/Rx';
+import { Observable, Observer, Subscription, interval } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home-observable',
@@ -15,15 +15,26 @@ export class HomeObservableComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
-    const myNumbers = Observable.interval(1000);
+    // chaining operators on observables is possible
+    // the map operator maps the observable into another observable
+    // without the rxjs-compat package you have to change the imports and the way the operator methods are used
+    const myNumbers = interval(1000)
+      .pipe(map(
+        (data: number) => {
+          return data * 2;
+        }
+      ))
+      .pipe(map(
+        (data: number) => {
+          return data - 1;
+        }
+      ));
     this.numberObservableSubscription = myNumbers.subscribe(
       (number: number) => {
         console.log(number);
       }
-      // , () => {}
-      // , () => {}
     );
-   const myObservable = Observable.create((observer: Observer<string>) => {
+    const myObservable = Observable.create((observer: Observer<string>) => {
       setTimeout(() => {
         // Push next data package
         observer.next('first package');
@@ -43,10 +54,10 @@ export class HomeObservableComponent implements OnInit, OnDestroy {
       }, 6000);
     });
     this.customObservableSubscription = myObservable.subscribe(
-      (data: string) => {console.log(data)},
-      (error: string) => {console.log(error)},
-      () => {console.log('completed')}
-      );
+      (data: string) => { console.log(data) },
+      (error: string) => { console.log(error) },
+      () => { console.log('completed') }
+    );
   }
 
   ngOnDestroy() {
