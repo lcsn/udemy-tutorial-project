@@ -17,6 +17,7 @@ import { ROUTING_ROUTES } from './assignments/routing/routing.routes';
 import { ErrorPageComponent } from './assignments/routing/error-page/error-page.component';
 import { OBSERVABLE_ROUTES } from './assignments/observable/observable-routing.routes';
 import { ObservableComponent } from './assignments/observable/observable.component';
+import { FormsTemplateDrivenComponent } from './assignments/forms-template-driven/forms-template-driven.component';
 
 const ROUTES: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },
@@ -33,6 +34,7 @@ const ROUTES: Routes = [
   { path: 'practice/services2', component: PracticeServices2Component },
   { path: 'practice/routing', component: RoutingComponent, children: ROUTING_ROUTES },
   { path: 'practice/observable', component: ObservableComponent, children: OBSERVABLE_ROUTES },
+  { path: 'practice/forms', component: FormsTemplateDrivenComponent },
   //{ path: 'not-found', component: PageNotFoundComponent },
   { path: 'not-found', component: ErrorPageComponent, data: { message: 'Page not found!' } },
   { path: '**', redirectTo: '/not-found' }

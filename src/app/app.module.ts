@@ -45,6 +45,7 @@ import { ErrorPageComponent } from './assignments/routing/error-page/error-page.
 import { ObservableComponent } from './assignments/observable/observable.component';
 import { HomeObservableComponent } from './assignments/observable/home-observable/home-observable.component';
 import { UserObservableComponent } from './assignments/observable/user-observable/user-observable.component';
+import { FormsTemplateDrivenComponent } from './assignments/forms-template-driven/forms-template-driven.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import { UserObservableComponent } from './assignments/observable/user-observabl
     ErrorPageComponent,
     ObservableComponent,
     HomeObservableComponent,
-    UserObservableComponent
+    UserObservableComponent,
+    FormsTemplateDrivenComponent
   ],
   imports: [
     BrowserModule,
