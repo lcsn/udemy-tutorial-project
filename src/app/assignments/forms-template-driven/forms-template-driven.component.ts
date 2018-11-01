@@ -12,9 +12,26 @@ export class FormsTemplateDrivenComponent {
 
   defaultQuestion = 'teacher';
   answer = '';
+  genders = ['male', 'female'];
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+    // // not the best approach
+    // // setting the value of the form - must exactly corresponds to the structure of the value object
+    // this.signupForm.setValue({
+    //   userData: {
+    //     username: suggestedName,
+    //     email: '',
+    //   },
+    //   secret: 'pet',
+    //   questionAnswer: '',
+    //   gender: 'male'
+    // })
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
   }
 
   // onSubmit(form: NgForm): void {
