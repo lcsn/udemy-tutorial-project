@@ -10,6 +10,9 @@ export class FormsTemplateDrivenComponent {
 
   @ViewChild('f') signupForm: NgForm;
 
+  defaultQuestion = 'teacher';
+  answer = '';
+
   suggestUserName() {
     const suggestedName = 'Superuser';
   }
