@@ -56,6 +56,9 @@ export class FormsTemplateDrivenComponent {
     this.user.answer = this.signupForm.value.questionAnswer;
     this.user.gender = this.signupForm.value.gender;
     this.submitted = true;
+
+    // empty all inputs and resets the state of the form (touch, valid)
+    this.signupForm.reset();
   }
 
 }
