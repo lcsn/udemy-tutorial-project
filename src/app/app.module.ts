@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { PracticeDatabindingComponent } from './assignments/databinding/practice-databinding.component';
 import { PracticeDirectiveComponent } from './assignments/directive/practice-directive.component';
@@ -103,6 +103,7 @@ import { FormsReactiveComponent } from './assignments/forms/forms-reactive/forms
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
