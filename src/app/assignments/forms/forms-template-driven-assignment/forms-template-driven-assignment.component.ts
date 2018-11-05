@@ -10,7 +10,8 @@ export class FormsTemplateDrivenAssignmentComponent implements OnInit {
 
   @ViewChild('f') signupForm: NgForm;
 
-  defaultSubscription = 'advanced';
+  subscriptions = ['Basic', 'Advanced', 'Pro'];
+  defaultSubscription = 'Advanced';
   user = {
     email: '',
     subscription: '',

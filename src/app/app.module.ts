@@ -48,6 +48,7 @@ import { UserObservableComponent } from './assignments/observable/user-observabl
 import { FormsTemplateDrivenComponent } from './assignments/forms/forms-template-driven/forms-template-driven.component';
 import { FormsComponent } from './assignments/forms/forms.component';
 import { FormsTemplateDrivenAssignmentComponent } from './assignments/forms/forms-template-driven-assignment/forms-template-driven-assignment.component';
+import { FormsReactiveComponent } from './assignments/forms/forms-reactive/forms-reactive.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,8 @@ import { FormsTemplateDrivenAssignmentComponent } from './assignments/forms/form
     UserObservableComponent,
     FormsTemplateDrivenComponent,
     FormsComponent,
-    FormsTemplateDrivenAssignmentComponent
+    FormsTemplateDrivenAssignmentComponent,
+    FormsReactiveComponent
   ],
   imports: [
     BrowserModule,
