@@ -49,6 +49,7 @@ import { FormsTemplateDrivenComponent } from './assignments/forms/forms-template
 import { FormsComponent } from './assignments/forms/forms.component';
 import { FormsTemplateDrivenAssignmentComponent } from './assignments/forms/forms-template-driven-assignment/forms-template-driven-assignment.component';
 import { FormsReactiveComponent } from './assignments/forms/forms-reactive/forms-reactive.component';
+import { FormsReactiveAssignComponent } from './assignments/forms/forms-reactive-assign/forms-reactive-assign.component';
 
 @NgModule({
   declarations: [
@@ -98,7 +99,8 @@ import { FormsReactiveComponent } from './assignments/forms/forms-reactive/forms
     FormsTemplateDrivenComponent,
     FormsComponent,
     FormsTemplateDrivenAssignmentComponent,
-    FormsReactiveComponent
+    FormsReactiveComponent,
+    FormsReactiveAssignComponent
   ],
   imports: [
     BrowserModule,
