@@ -19,6 +19,7 @@ export class FormsReactiveComponent implements OnInit {
 
   constructor() { }
 
+  // this must be bound via calling bind(this) - angular calls the validator method and this references to a different space
   ngOnInit() {
     this.signupForm = new FormGroup({
       'userData': new FormGroup({
@@ -41,6 +42,7 @@ export class FormsReactiveComponent implements OnInit {
   }
 
   // Specifying the return in typescript as a JSON object by describing the key-value-pair
+  // Returning null indicates that the validation was ok
   forbiddenNames(control: FormControl): {[s: string]: boolean} {
     if (this.forbiddenUsernames.indexOf(control.value) !== -1) {
       return {'nameIsForbidden': true};
