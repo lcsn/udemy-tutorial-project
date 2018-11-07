@@ -44,8 +44,12 @@
             <span *ngIf="projectForm.get('status').errors['required']">Status is required!</span>
           </span>
         </div>
-        <button class="btn btn-primary" type="submit">Send</button>
+        <button class="btn btn-primary" type="submit" [disabled]="projectForm.invalid">Send</button>
       </form>
+      <span
+        class="help-block"
+        *ngIf="!projectForm.valid && projectForm.touched">
+        Please enter valid data!</span>
       <hr>
       <div class="row" *ngIf="submitted">
           <div class="col-xs-12">
