@@ -3,46 +3,48 @@
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <h4><strong>Project</strong></h4>
       <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="name">
+        <div formGroupName="project">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name">
+              <span
+                class="help-block"
+                *ngIf="!projectForm.get('project.name').valid && projectForm.get('project.name').touched">
+                <span *ngIf="projectForm.hasError('forbiddenName', 'project.name')">Name is forbidden!</span>
+                <span *ngIf="projectForm.get('project.name').errors?.required">Name is required!</span>
+              </span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              formControlName="email">
+              <span
+                class="help-block"
+                *ngIf="!projectForm.get('project.email').valid && projectForm.get('project.email').touched">
+                <span *ngIf="projectForm.get('project.email').errors['email']">Email is invalid!</span>
+                <span *ngIf="projectForm.get('project.email').errors['required']">Email is required!</span>
+              </span>
+          </div>
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select
+              name="status"
+              id="status"
+              class="form-control"
+              formControlName="status">
+              <option *ngFor="let status of projectStatus" [value]="status">{{ status }}</option>
+            </select>
             <span
               class="help-block"
-              *ngIf="!projectForm.get('name').valid && projectForm.get('name').touched">
-              <span *ngIf="projectForm.hasError('forbiddenName', 'name')">Name is forbidden!</span>
-              <span *ngIf="projectForm.get('name').errors?.required">Name is required!</span>
+              *ngIf="!projectForm.get('project.status').valid && projectForm.get('project.status').touched">
+              <span *ngIf="projectForm.get('project.status').errors['required']">Status is required!</span>
             </span>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            formControlName="email">
-            <span
-              class="help-block"
-              *ngIf="!projectForm.get('email').valid && projectForm.get('email').touched">
-              <span *ngIf="projectForm.get('email').errors['email']">Email is invalid!</span>
-              <span *ngIf="projectForm.get('email').errors['required']">Email is required!</span>
-            </span>
-        </div>
-        <div class="form-group">
-          <label for="status">Status</label>
-          <select
-            name="status"
-            id="status"
-            class="form-control"
-            formControlName="status">
-            <option *ngFor="let status of projectStatus" [value]="status">{{ status }}</option>
-          </select>
-          <span
-            class="help-block"
-            *ngIf="!projectForm.get('status').valid && projectForm.get('status').touched">
-            <span *ngIf="projectForm.get('status').errors['required']">Status is required!</span>
-          </span>
+          </div>
         </div>
         <button class="btn btn-primary" type="submit" [disabled]="projectForm.invalid">Send</button>
       </form>
