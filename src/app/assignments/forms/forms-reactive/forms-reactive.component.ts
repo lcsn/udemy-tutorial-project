@@ -33,8 +33,8 @@ export class FormsReactiveComponent implements OnInit {
     // this.signupForm.valueChanges.subscribe((change) => {
     //   console.log(change);
     // });
-    this.signupForm.statusChanges.subscribe(() => {
-      console.log(this.signupForm.status);
+    this.signupForm.statusChanges.subscribe((status) => {
+      console.log(status);
     });
     this.signupForm.setValue({
       'userData': {
