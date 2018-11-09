@@ -20,6 +20,7 @@ import { ObservableComponent } from './assignments/observable/observable.compone
 import { FormsTemplateDrivenComponent } from './assignments/forms/forms-template-driven/forms-template-driven.component';
 import { FORMS_ROUTES } from './assignments/forms/forms-routing.routes';
 import { FormsComponent } from './assignments/forms/forms.component';
+import { PipesComponent } from './assignments/pipes/pipes.component';
 
 const ROUTES: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },
@@ -37,6 +38,7 @@ const ROUTES: Routes = [
   { path: 'practice/routing', component: RoutingComponent, children: ROUTING_ROUTES },
   { path: 'practice/observable', component: ObservableComponent, children: OBSERVABLE_ROUTES },
   { path: 'practice/forms', component: FormsComponent, children: FORMS_ROUTES },
+  { path: 'practice/pipes', component: PipesComponent },
   //{ path: 'not-found', component: PageNotFoundComponent },
   { path: 'not-found', component: ErrorPageComponent, data: { message: 'Page not found!' } },
   { path: '**', redirectTo: '/not-found' }
