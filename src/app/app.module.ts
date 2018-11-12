@@ -51,6 +51,10 @@ import { FormsTemplateDrivenAssignmentComponent } from './assignments/forms/form
 import { FormsReactiveComponent } from './assignments/forms/forms-reactive/forms-reactive.component';
 import { FormsReactiveAssignComponent } from './assignments/forms/forms-reactive-assign/forms-reactive-assign.component';
 import { PipesComponent } from './assignments/pipes/pipes.component';
+import { ShortenPipe } from './assignments/pipes/shorten.pipe';
+import { FilterPipe } from './assignments/pipes/filter.pipe';
+import { ReversePipe } from './assignments/pipes/reverse.pipe';
+import { SortPipe } from './assignments/pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -102,7 +106,11 @@ import { PipesComponent } from './assignments/pipes/pipes.component';
     FormsTemplateDrivenAssignmentComponent,
     FormsReactiveComponent,
     FormsReactiveAssignComponent,
-    PipesComponent
+    PipesComponent,
+    ShortenPipe,
+    FilterPipe,
+    ReversePipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
