@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerService } from './server.service';
-import { Response } from '@angular/http';
-import { Observable } from 'rxjs';
+// import { Response } from '@angular/http';
+// import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-http',
@@ -22,6 +22,8 @@ export class HttpComponent implements OnInit {
     //   id: this.generateId()
     // }
   ];
+
+  appName = this.serverService.getAppName();
 
   constructor(private serverService: ServerService) { }
 

@@ -10,6 +10,19 @@ export class ServerService {
 
   constructor(private http: Http) { }
 
+  getAppName(): Observable<string> {
+    return this.http.get('https://udemy-ng-http-3ccd2.firebaseio.com/appName.json')
+      .pipe(
+        map((response: Response) => {
+          const data = response.json();
+          return data;
+        })
+      )
+      .pipe(catchError((error: any) => {
+        return throwError(error);
+      }));
+  }
+
   storeServers(servers: any[]): Observable<any> {
     // request is not sent yet - because it is an observable beneath the hood, you have to subscribe to the returned observable
     // .json at the is firebase specific
@@ -21,7 +34,7 @@ export class ServerService {
   }
 
   getServers(): Observable<any> {
-    // no use of rxjs-compat therefore i use pipe(map())
+    // no use of rxjs-compat therefore i have to use pipe(map())
     return this.http.get('https://udemy-ng-http-3ccd2.firebaseio.com/data')
       .pipe(
         map((response: Response) => {
@@ -34,7 +47,7 @@ export class ServerService {
       )
       .pipe(catchError((error: Response) => {
         return throwError('Something went wrong');
-      }))
+      }));
   }
 
 }
