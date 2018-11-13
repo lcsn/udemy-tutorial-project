@@ -56,6 +56,7 @@ import { FilterPipe } from './assignments/pipes/filter.pipe';
 import { ReversePipe } from './assignments/pipes/reverse.pipe';
 import { SortPipe } from './assignments/pipes/sort.pipe';
 import { HttpComponent } from './assignments/http/http.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -118,7 +119,8 @@ import { HttpComponent } from './assignments/http/http.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
