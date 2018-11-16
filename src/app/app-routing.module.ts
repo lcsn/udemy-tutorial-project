@@ -22,6 +22,7 @@ import { FORMS_ROUTES } from './assignments/forms/forms-routing.routes';
 import { FormsComponent } from './assignments/forms/forms.component';
 import { PipesComponent } from './assignments/pipes/pipes.component';
 import { HttpComponent } from './assignments/http/http.component';
+import { AnimationsComponent } from './assignments/animations/animations.component';
 
 const ROUTES: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },
@@ -41,7 +42,8 @@ const ROUTES: Routes = [
   { path: 'practice/forms', component: FormsComponent, children: FORMS_ROUTES },
   { path: 'practice/pipes', component: PipesComponent },
   { path: 'practice/http', component: HttpComponent },
-  //{ path: 'not-found', component: PageNotFoundComponent },
+  { path: 'practice/animations', component: AnimationsComponent },
+  //{ path: 'not-found', component: PageNotFoundComponent },  
   { path: 'not-found', component: ErrorPageComponent, data: { message: 'Page not found!' } },
   { path: '**', redirectTo: '/not-found' }
 ];

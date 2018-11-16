@@ -57,6 +57,7 @@ import { ReversePipe } from './assignments/pipes/reverse.pipe';
 import { SortPipe } from './assignments/pipes/sort.pipe';
 import { HttpComponent } from './assignments/http/http.component';
 import { HttpModule } from '@angular/http';
+import { AnimationsComponent } from './assignments/animations/animations.component';
 
 @NgModule({
   declarations: [
@@ -113,7 +114,8 @@ import { HttpModule } from '@angular/http';
     FilterPipe,
     ReversePipe,
     SortPipe,
-    HttpComponent
+    HttpComponent,
+    AnimationsComponent
   ],
   imports: [
     BrowserModule,
