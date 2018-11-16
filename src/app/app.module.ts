@@ -58,6 +58,7 @@ import { SortPipe } from './assignments/pipes/sort.pipe';
 import { HttpComponent } from './assignments/http/http.component';
 import { HttpModule } from '@angular/http';
 import { AnimationsComponent } from './assignments/animations/animations.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -122,7 +123,8 @@ import { AnimationsComponent } from './assignments/animations/animations.compone
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
