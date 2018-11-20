@@ -58,7 +58,9 @@ import { SortPipe } from './assignments/pipes/sort.pipe';
 import { HttpComponent } from './assignments/http/http.component';
 import { HttpModule } from '@angular/http';
 import { AnimationsComponent } from './assignments/animations/animations.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AnimationsCourseComponent } from './assignments/animations/animations-course/animations-course.component';
+import { AnimationsExample1Component } from './assignments/animations/animations-example1/animations-example1.component'
 
 @NgModule({
   declarations: [
@@ -116,7 +118,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     ReversePipe,
     SortPipe,
     HttpComponent,
-    AnimationsComponent
+    AnimationsComponent,
+    AnimationsCourseComponent,
+    AnimationsExample1Component
   ],
   imports: [
     BrowserModule,

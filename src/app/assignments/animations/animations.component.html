@@ -1,34 +1,23 @@
 <div class="container">
+  <h1>Animations</h1>
   <div class="row">
     <div class="col-xs-12">
-      <h1>Animations</h1>
-      <button class="btn btn-primary" (click)="onAnimate()">Animate!</button>
-      <button class="btn btn-primary" (click)="onShrink()">Shrink!</button>
+      <header>
+        <ul class="nav nav-pills">
+          <li role="presentation" routerLinkActive="active">
+            <a routerLink="course">
+              Course
+            </a>
+          </li>
+          <li role="presentation" routerLinkActive="active">
+            <a routerLink="example1">
+              Example 1
+            </a>
+          </li>
+        </ul>
+      </header>
       <hr>
-      <div style="width: 100px; height: 100px;" [@divState]="state">
-      </div>
-      <div style="width: 100px; height: 100px;" [@wildState]="wildState">
-      </div>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <input type="text" #input>
-    <button class="btn btn-primary" (click)="onAdd(input.value)">Add Item!</button>
-    <hr>
-    <div class="col-xs-6">
-      <ul class="list-group">
-        <li class="list-group-item" (click)="onDelete(i)" *ngFor="let item of list; let i = index" [@list1]>
-          {{ item }}
-        </li>
-      </ul>
-    </div>
-    <div class="col-xs-6">
-      <ul class="list-group">
-        <li class="list-group-item" (click)="onDelete(index)" *ngFor="let item of list; let i = index" [@list2]>
-          {{ item }}
-        </li>
-      </ul>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

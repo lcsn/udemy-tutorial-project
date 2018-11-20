@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onAnimate()">Animate!</button>
+      <div
+        style="width: 100px; height: 100px;"
+        [@divState]="state">
+      </div>
+      <hr>
+      <div>
+        <input
+          type="text"
+          [@inputState]="inputState"
+          (focus)="onAnimateInput()"
+          (blur)="onAnimateInput()"
+          [(ngModel)]="myText"
+          style="text-align: center">
+          <label for="chkbx">
+            Error? <input id="chkbx" type="checkbox" [(ngModel)]="error">
+          </label>
+      </div>
+      <p>
+        {{ myText }}
+      </p>
+    </div>
+  </div>
+</div>
