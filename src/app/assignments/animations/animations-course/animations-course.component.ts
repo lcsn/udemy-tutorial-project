@@ -82,12 +82,12 @@ import { trigger, state, style, transition, animate, keyframes, group } from '@a
           }),
           style({
             transform: 'translateX(-20px)',
-            opacity: 0.1,
+            opacity: 0.8,
             offset: 0.8
           }),
           style({
             transform: 'translateX(0px)',
-            opacity: 0.1,
+            opacity: 1,
             offset: 1
           })
         ]))
