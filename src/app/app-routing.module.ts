@@ -24,6 +24,7 @@ import { PipesComponent } from './assignments/pipes/pipes.component';
 import { HttpComponent } from './assignments/http/http.component';
 import { AnimationsComponent } from './assignments/animations/animations.component';
 import { ANIMATIONS_ROUTES } from './assignments/animations/animations-routing.routes';
+import { CoredbProductsComponent } from './assignments/coredb-products/coredb-products.component';
 
 const ROUTES: Routes = [
   { path: '', redirectTo: '/servers', pathMatch: 'full' },
@@ -44,6 +45,7 @@ const ROUTES: Routes = [
   { path: 'practice/pipes', component: PipesComponent },
   { path: 'practice/http', component: HttpComponent },
   { path: 'practice/animations', component: AnimationsComponent, children: ANIMATIONS_ROUTES },
+  { path: 'practice/coredb', component: CoredbProductsComponent },
   //{ path: 'not-found', component: PageNotFoundComponent },  
   { path: 'not-found', component: ErrorPageComponent, data: { message: 'Page not found!' } },
   { path: '**', redirectTo: '/not-found' }

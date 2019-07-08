@@ -60,7 +60,8 @@ import { HttpModule } from '@angular/http';
 import { AnimationsComponent } from './assignments/animations/animations.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AnimationsCourseComponent } from './assignments/animations/animations-course/animations-course.component';
-import { AnimationsExample1Component } from './assignments/animations/animations-example1/animations-example1.component'
+import { AnimationsExample1Component } from './assignments/animations/animations-example1/animations-example1.component';
+import { CoredbProductsComponent } from './assignments/coredb-products/coredb-products.component'
 
 @NgModule({
   declarations: [
@@ -120,7 +121,8 @@ import { AnimationsExample1Component } from './assignments/animations/animations
     HttpComponent,
     AnimationsComponent,
     AnimationsCourseComponent,
-    AnimationsExample1Component
+    AnimationsExample1Component,
+    CoredbProductsComponent
   ],
   imports: [
     BrowserModule,
